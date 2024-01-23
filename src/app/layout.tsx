@@ -1,8 +1,8 @@
+import TanstackProvider from '@/providers/TanstackProvider';
 import StoreProvider from '@/store/StoreProvider';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,9 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <StoreProvider>
-    <html lang="en">
+      <html lang="en">
         <body className={inter.className}>
-          <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+            <TanstackProvider>
+              {children}
+            </TanstackProvider>
+          </AppRouterCacheProvider>
         </body>
       </html>
     </StoreProvider>
