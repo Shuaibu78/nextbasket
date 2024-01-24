@@ -23,11 +23,11 @@ const FeaturedPostCard = ({ imageUrl }: { imageUrl: string }) => {
         </Stack>
 
         <Typography variant="h4" align="left" color="#252B42" fontWeight={400} fontSize="20px" lineHeight="30px" letterSpacing="0.2px">
-          Loudest à la Madison #1 (L'integral)
+          Loudest à la Madison #1 (L&apos;integral)
         </Typography>
 
         <Typography variant="body1" align="left" color="#737373" fontSize="14px" fontWeight={400} lineHeight="20px" letterSpacing="0.2px">
-          We focus on ergonomics and meeting you where you work. It's only a keystroke away.
+          We focus on ergonomics and meeting you where you work. It&apos;s only a keystroke away.
         </Typography>
 
         <Box display="flex" justifyContent="space-between" alignItems="center" columnGap={1}>
