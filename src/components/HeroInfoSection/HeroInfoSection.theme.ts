@@ -6,10 +6,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
   boxContainer: (props: HeroInfoSectionProps) => ({
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    justifyContent: props?.justifyContent || "space-between",
     height: "100%",
     position: "absolute",
-    top: props.top || "4%",
-    left: props.left || "7%",
+    top: props?.top || "4%",
+    left: props?.left || "7%",
   }),
 }));

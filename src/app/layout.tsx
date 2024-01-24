@@ -2,8 +2,11 @@ import TanstackProvider from '@/providers/TanstackProvider';
 import StoreProvider from '@/store/StoreProvider';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { Roboto } from "next/font/google";
+import "./globals.css";
+import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
+const inter = Roboto({ weight: ["100", "300", "400", "500", "700", "900"], subsets: ["cyrillic", "cyrillic-ext", "greek", "greek-ext", "vietnamese", "latin", "latin-ext"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +24,9 @@ export default function RootLayout({
         <body className={inter.className}>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <TanstackProvider>
+              <Navbar />
               {children}
+              <Footer />
             </TanstackProvider>
           </AppRouterCacheProvider>
         </body>

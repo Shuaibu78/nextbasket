@@ -1,9 +1,8 @@
 "use client";
-import { ProductCardProps } from "@/interfaces/ProductCardProps.interface";
-import ProductCard from "../ProductCard/ProductCard"
-import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { Box, Button, CircularProgress, Container, Grid } from "@mui/material";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import ProductCard from "../ProductCard/ProductCard";
 
 const ProductList = () => {
   const [limit, setLimit] = useState(8);
@@ -56,7 +55,7 @@ const ProductList = () => {
             {isFetching ? (
               <CircularProgress size={24} />
             ) : (
-              "Load More Products"
+                "LOAD MORE PRODUCTS"
             )}
           </Button>
         </Box>

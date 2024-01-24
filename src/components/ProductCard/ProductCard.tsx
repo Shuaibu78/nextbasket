@@ -14,7 +14,7 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({
     <Card sx={{ maxWidth: 345, maxHeight: 500, height: "100%", display: "flex", flexDirection: "column" }}>
       <Image src={imageUrl} alt={productName} width={200} height={200} style={{ width: "100%", maxHeight: "70%", objectFit: "cover" }} />
 
-      <CardContent sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+      <CardContent sx={{ flex: 1, display: "flex", flexDirection: "column", rowGap: "4px" }}>
         <Typography variant="h6" align="center" color="#252B42" fontWeight={700} fontSize="16px">
           {productName}
         </Typography>
