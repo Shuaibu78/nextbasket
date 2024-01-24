@@ -1,21 +1,19 @@
-import { Container } from '@mui/material';
+"use client";
 import React, { ReactNode } from 'react';
-import Classes from "./maxWidthWrapper.module.css";
+import { StyledContainer } from "./MaxWidthWrapper.theme";
 
 interface MaxWidthWrapperProps {
-  className?: string;
   children: ReactNode;
 }
 
-const MaxWidthWrapper: React.FC<MaxWidthWrapperProps> = ({ className, children }) => {
+const MaxWidthWrapper: React.FC<MaxWidthWrapperProps> = ({ children }) => {
   return (
-    <Container
+    <StyledContainer
       maxWidth="xl"
       sx={{ width: '100%' }}
-      className={`${className}, ${Classes.container}`}
     >
       {children}
-    </Container>
+    </StyledContainer>
   );
 };
 
